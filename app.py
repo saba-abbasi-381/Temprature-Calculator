@@ -1,7 +1,7 @@
 import streamlit as st
 
-from backend import TempratureConverter 
-st.title("🌡️Temprature Converter")
+from backend import TemperatureConverter 
+st.title("🌡️ Temperature Converter")
 choice = st.selectbox("Select an option",['None', 'Celsius -> Fahrenheit', 'Fahrenheit -> Celsius'])
 temp = st.number_input("Enter temprature")
 
@@ -15,6 +15,6 @@ if st.button("Convert"):
         if choice == 'Celsius -> Fahrenheit':
             result = temp.celsius_to_fahrenheit()
         else:
-            result = temp.fahrenhiet_to_celsius()
+            result = temp.fahrenheit_to_celsius()
     
         st.success(f"🌡️Result: {result:.2f}º")
