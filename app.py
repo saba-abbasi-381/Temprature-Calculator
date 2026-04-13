@@ -6,7 +6,7 @@ choice = st.selectbox("Select an option",['None', 'Celsius -> Fahrenheit', 'Fahr
 temp = st.number_input("Enter temprature")
 
 
-temp = TempratureConverter(temp)
+temp = TemperatureConverter(temp)
 
 if st.button("Convert"):
     if choice == 'None':
