@@ -1,14 +1,14 @@
 import streamlit as st
 
 from backend import TempratureConverter 
-st.title("Temprature Calculator")
+st.title("🌡️Temprature Converter")
 choice = st.selectbox("Select an option",['None', 'Celsius -> Fahrenheit', 'Fahrenheit -> Celsius'])
 temp = st.number_input("Enter temprature")
 
 
 temp = TempratureConverter(temp)
 
-if st.button("Calculate"):
+if st.button("Convert"):
     if choice == 'None':
         st.warning("Please select a conversion type!")
     else:
@@ -17,4 +17,4 @@ if st.button("Calculate"):
         else:
             result = temp.fahrenhiet_to_celsius()
     
-        st.success(f"Result: {result:.2f}º")
+        st.success(f"🌡️Result: {result:.2f}º")
